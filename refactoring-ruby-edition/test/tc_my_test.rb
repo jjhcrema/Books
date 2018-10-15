@@ -5,9 +5,9 @@ require_relative '../customer'
 
 class TC_MyTest < Test::Unit::TestCase
   def before
-    @regular_movie = Movie.new('TEST_MOVIE_0', Movie::REGULAR)
-    @new_release_movie = Movie.new('TEST_MOVIE_1', Movie::NEW_RELEASE)
-    @childrens_movie = Movie.new('TEST_MOVIE_2', Movie::CHILDRENS)
+    @regular_movie = Movie.new('TEST_MOVIE_0', RegularPrice.new)
+    @new_release_movie = Movie.new('TEST_MOVIE_1', NewReleasePrice.new)
+    @childrens_movie = Movie.new('TEST_MOVIE_2', ChildrensPrice.new)
   end
 
   def test_default
